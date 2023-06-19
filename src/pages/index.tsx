@@ -48,7 +48,7 @@ export default function Home() {
       </Head>
       <header></header>
       <nav></nav>
-      <main className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+      <main className="grid grid-cols-1 items-center justify-items-center md:grid-cols-2 lg:grid-cols-3">
         <QRCode />
       </main>
       <footer></footer>
