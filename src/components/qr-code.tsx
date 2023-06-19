@@ -3,12 +3,13 @@ import Image from "next/image";
 const QRCode: React.FC = () => {
   return (
     <div>
-      <div>
+      <div className="h-36 w-36">
         <Image
-          src="/xxx.png"
+          src="/assets/image-qr-code.png"
           width={0}
           height={0}
           alt="Picture of the QR code"
+          fill
         />
       </div>
       <p>Improve your front-end skills by building projects</p>
