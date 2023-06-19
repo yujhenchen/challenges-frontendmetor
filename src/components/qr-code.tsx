@@ -11,7 +11,7 @@ const QRCode: React.FC = () => {
           alt="Picture of the QR code"
         />
       </div>
-      <p>Improve your frontend skills by building projects</p>
+      <p>Improve your front-end skills by building projects</p>
       <p>
         Scan the QR code to visit Frontend Mentor and take your coding skills to
         the next level
