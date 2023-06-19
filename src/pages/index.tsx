@@ -47,7 +47,8 @@ export default function Home() {
         <link rel="icon" href="/" />
       </Head>
       <header></header>
-      <main>
+      <nav></nav>
+      <main className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
         <QRCode />
       </main>
       <footer></footer>

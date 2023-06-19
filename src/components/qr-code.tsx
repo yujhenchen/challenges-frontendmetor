@@ -2,8 +2,8 @@ import Image from "next/image";
 
 const QRCode: React.FC = () => {
   return (
-    <div className="flex flex-col items-center justify-center">
-      <div className="relative h-[375px] w-[375px] lg:h-[1440px] lg:w-[1440px]">
+    <div className="flex flex-col items-center justify-items-center p-4">
+      <div className="relative h-[375px] w-[375px] lg:h-[576px] lg:w-[576px]">
         <Image
           src="/assets/image-qr-code.png"
           alt="Picture of the QR code"
