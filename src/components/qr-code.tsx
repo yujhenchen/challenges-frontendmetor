@@ -11,7 +11,7 @@ const QRCode: React.FC = () => {
           style={{ objectFit: "contain" }}
         />
       </div>
-      <h1 className="pb-2 pt-4 font-outfit text-base font-bold">
+      <h1 className="pb-2 pt-4 text-center font-outfit text-base font-bold">
         Improve your front-end skills by building projects
       </h1>
       <p className="text-center font-outfit font-normal text-grayishblue">
