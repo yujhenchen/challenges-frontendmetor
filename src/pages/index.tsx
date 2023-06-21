@@ -1,4 +1,5 @@
 import Head from "next/head";
+import InteractiveRating from "~/components/interactive-rating";
 // import Link from "next/link";
 import QRCode from "~/components/qr-code";
 
@@ -48,8 +49,9 @@ export default function Home() {
       </Head>
       <header className="block h-12 w-screen bg-sky-300"></header>
       <nav className="sticky top-0 z-10 h-20 w-screen bg-slate-300 shadow-md"></nav>
-      <main className="container mx-auto grid grid-cols-1 items-center justify-evenly justify-items-center gap-x-4 gap-y-8 bg-slate-100 p-6 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6">
+      <main className="container mx-auto grid grid-flow-col grid-cols-1 items-center justify-evenly justify-items-center gap-x-4 gap-y-8 bg-slate-100 p-6 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6">
         <QRCode />
+        <InteractiveRating />
       </main>
       <footer></footer>
     </>
