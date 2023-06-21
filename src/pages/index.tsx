@@ -50,22 +50,6 @@ export default function Home() {
       <nav className="sticky top-0 z-10 h-20 w-screen bg-slate-300 shadow-md"></nav>
       <main className="container mx-auto grid grid-cols-1 items-center justify-evenly justify-items-center gap-x-4 gap-y-8 bg-slate-100 p-6 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6">
         <QRCode />
-        <QRCode />
-        <QRCode />
-        <QRCode />
-        <QRCode />
-        <QRCode />
-        <QRCode />
-        <QRCode />
-        <QRCode />
-        <QRCode />
-        <QRCode />
-        <QRCode />
-        <QRCode />
-        <QRCode />
-        <QRCode />
-        <QRCode />
-        <QRCode />
       </main>
       <footer></footer>
     </>
