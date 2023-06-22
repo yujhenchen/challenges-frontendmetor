@@ -3,7 +3,7 @@ const InteractiveRating: React.FC = () => {
 
   return (
     <div className="h-full bg-white duration-500 hover:shadow-lg">
-      <div className="flex h-full flex-col place-content-between bg-slate-800 p-4 ">
+      <div className="flex h-full flex-col place-content-between bg-slate-800 p-4">
         <div className="flex h-fit w-fit rounded-full bg-slate-600 p-2">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -22,22 +22,21 @@ const InteractiveRating: React.FC = () => {
           Please let us know how we did with your support request. All feedback
           is appreciated to help us improve our offering!
         </p>
-        <div className="flex w-full place-content-between space-x-1">
+        <div className="flex w-full place-content-between space-x-3">
           {rateNumbers.map((rate) => {
             return (
               <button
                 key={rate}
-                className="aspect-square w-[20%] rounded-full bg-slate-600 text-center text-white"
+                className="aspect-square w-[20%] rounded-full bg-slate-600 text-center text-white duration-200 hover:bg-orange-400"
               >
                 {rate + 1}
               </button>
             );
           })}
         </div>
-        <input
-          type="submit"
-          className="w-full rounded-3xl bg-orange-600 py-2 text-white"
-        ></input>
+        <button className="w-full rounded-3xl bg-orange-600 py-2 font-outfit text-white">
+          Submit
+        </button>
       </div>
     </div>
   );
