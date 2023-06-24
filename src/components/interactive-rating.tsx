@@ -1,5 +1,27 @@
+import { useState } from "react";
+
 const InteractiveRating: React.FC = () => {
-  const rateNumbers = [...Array(5).keys()];
+  const ratingNumbers = [...Array(5).keys()];
+
+  const [ratingNumber, setRatingNumber] = useState(0);
+
+  //   const buttonColor = {
+  //     default: "bg-slate-600",
+  //     selected: "bg-orange-600",
+  //   };
+
+  function handleRating(
+    event: React.MouseEvent<HTMLButtonElement, MouseEvent>
+  ): void {
+    // if current click is the same as the previous click, set the ratingNumber to 0 and change the button color to default
+    // else set the ratingNumber to the click one, and set the button color to selected color
+
+    setRatingNumber((previousNum) => {
+      return previousNum === +(event.target as HTMLButtonElement).value
+        ? 0
+        : +(event.target as HTMLButtonElement).value;
+    });
+  }
 
   return (
     // <div className="h-full w-full bg-white font-outfit duration-500 hover:shadow-lg">
@@ -21,17 +43,21 @@ const InteractiveRating: React.FC = () => {
         appreciated to help us improve our offering!
       </p>
       <div className="flex w-full place-content-between space-x-3">
-        {rateNumbers.map((rate) => {
+        {ratingNumbers.map((num) => {
           return (
             <button
-              key={rate}
+              key={num}
               className="aspect-square w-[20%] rounded-full bg-slate-600 text-center text-white duration-200 hover:bg-orange-400"
+              onClick={handleRating}
+              value={num}
+              name={`button${num}`}
             >
-              {rate + 1}
+              {num}
             </button>
           );
         })}
       </div>
+      <p>This is for debugging use: {ratingNumber}</p>
       <button className="w-full rounded-3xl bg-orange-600 py-2 text-white">
         Submit
       </button>
