@@ -1,6 +1,10 @@
-const Card: React.FC = () => {
+import React from "react";
+
+const Card = ({ children }: { children: React.ReactNode }) => {
   return (
-    <div className="h-full w-full bg-white p-4 font-outfit duration-500 hover:shadow-lg"></div>
+    <div className="h-full w-full bg-white font-outfit duration-500 hover:shadow-lg">
+      {children}
+    </div>
   );
 };
 
