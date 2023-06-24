@@ -3,12 +3,14 @@ import { useState } from "react";
 const InteractiveRating: React.FC = () => {
   const ratingNumbers = [...Array(5).keys()];
 
-  const [ratingNumber, setRatingNumber] = useState(0);
+  const [selectedRating, setSelectedRating] = useState(0);
 
-  //   const buttonColor = {
-  //     default: "bg-slate-600",
-  //     selected: "bg-orange-600",
-  //   };
+  //   const [ratingSelectedColor, setRatingSelectedColor] = useState("");
+
+  const ratingButtonColors = {
+    default: "bg-slate-600",
+    selected: "bg-orange-600",
+  };
 
   function handleRating(
     event: React.MouseEvent<HTMLButtonElement, MouseEvent>
@@ -16,11 +18,14 @@ const InteractiveRating: React.FC = () => {
     // if current click is the same as the previous click, set the ratingNumber to 0 and change the button color to default
     // else set the ratingNumber to the click one, and set the button color to selected color
 
-    setRatingNumber((previousNum) => {
+    setSelectedRating((previousNum) => {
       return previousNum === +(event.target as HTMLButtonElement).value
         ? 0
         : +(event.target as HTMLButtonElement).value;
     });
+
+    // setRatingSelectedColor(event.target as HTMLButtonElement);
+    //   ratingNumber === +(event.target as HTMLButtonElement).value ? true : false
   }
 
   return (
@@ -44,9 +49,15 @@ const InteractiveRating: React.FC = () => {
       </p>
       <div className="flex w-full place-content-between space-x-3">
         {ratingNumbers.map((num) => {
+          //   console.log({ ratingSelected });
           return (
             <button
               key={num}
+              //   className={`aspect-square w-[20%] rounded-full bg-slate-600 text-center text-white duration-200 hover:bg-orange-400 ${
+              //     ratingSelected
+              //       ? ratingButtonColors.selected
+              //       : ratingButtonColors.default
+              //   }`}
               className="aspect-square w-[20%] rounded-full bg-slate-600 text-center text-white duration-200 hover:bg-orange-400"
               onClick={handleRating}
               value={num}
@@ -57,7 +68,7 @@ const InteractiveRating: React.FC = () => {
           );
         })}
       </div>
-      <p>This is for debugging use: {ratingNumber}</p>
+      <p>This is for debugging use: {selectedRating}</p>
       <button className="w-full rounded-3xl bg-orange-600 py-2 text-white">
         Submit
       </button>
