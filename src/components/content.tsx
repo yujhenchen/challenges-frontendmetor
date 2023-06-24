@@ -13,6 +13,7 @@ const Content: React.FC = () => {
       <Card>
         <InteractiveRating />
       </Card>
+      <Card />
     </main>
   );
 };

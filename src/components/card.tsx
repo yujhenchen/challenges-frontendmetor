@@ -1,6 +1,10 @@
 import React from "react";
 
-const Card = ({ children }: { children: React.ReactNode }) => {
+type Props = {
+  children?: React.ReactNode;
+};
+
+const Card = ({ children }: Props) => {
   return (
     <div className="h-full w-full bg-white font-outfit duration-500 hover:shadow-lg">
       {children}
