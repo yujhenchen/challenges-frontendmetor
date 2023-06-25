@@ -1,6 +1,10 @@
 import Image from "next/image";
 
-const InteractiveThanks = () => {
+type Props = {
+  ratingNum: number;
+};
+
+const InteractiveThanks = ({ ratingNum }: Props) => {
   return (
     <div className="flex h-full flex-col justify-items-center bg-slate-800 p-4">
       <div className="relative mt-4 flex aspect-[4/3] w-full overflow-hidden">
@@ -12,7 +16,7 @@ const InteractiveThanks = () => {
         />
       </div>
       <div className=" mt-2 w-full rounded-3xl bg-slate-700 p-2 text-center text-xs text-orange-600">
-        You selected 4 out of 5
+        You selected {ratingNum} out of 5
       </div>
       <h1 className="mt-6 text-center text-xl font-bold text-white">
         Thank you!

@@ -93,7 +93,7 @@ const InteractiveRating = () => {
   return (
     <>
       {currentStep === FeedbackSteps.Second && selectedRating !== 0 ? (
-        <InteractiveThanks />
+        <InteractiveThanks ratingNum={selectedRating} />
       ) : (
         <RatingForm />
       )}
