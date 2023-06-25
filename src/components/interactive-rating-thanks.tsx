@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-const InteractiveThanks: React.FC = () => {
+const InteractiveThanks = () => {
   return (
     <div className="flex h-full flex-col justify-items-center bg-slate-800 p-4">
       <div className="relative mt-4 flex aspect-[4/3] w-full overflow-hidden">
