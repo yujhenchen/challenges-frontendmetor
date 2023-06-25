@@ -35,7 +35,9 @@ const InteractiveRating = () => {
     event: React.MouseEvent<HTMLButtonElement, MouseEvent>
   ): void {
     event.preventDefault();
-    setCurrentStep(FeedbackSteps.Second);
+    setCurrentStep(
+      selectedRating !== 0 ? FeedbackSteps.Second : FeedbackSteps.First
+    );
   }
 
   const RatingForm = () => {
@@ -90,10 +92,10 @@ const InteractiveRating = () => {
 
   return (
     <>
-      {currentStep === FeedbackSteps.First ? (
-        <RatingForm />
-      ) : (
+      {currentStep === FeedbackSteps.Second && selectedRating !== 0 ? (
         <InteractiveThanks />
+      ) : (
+        <RatingForm />
       )}
     </>
   );
