@@ -1,6 +1,5 @@
 import Card from "./card";
 import InteractiveRating from "./interactive-rating";
-import InteractiveThanks from "./interactive-rating-thanks";
 import QRCode from "./qr-code";
 
 const Content = () => {
@@ -16,9 +15,6 @@ const Content = () => {
         <InteractiveRating />
       </Card>
       <Card />
-      <Card>
-        <InteractiveThanks />
-      </Card>
     </main>
   );
 };

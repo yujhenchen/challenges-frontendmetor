@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Content from "~/components/content";
+import CommentSection from "~/components/interactive-comments/commentSection";
 
 export default function Home() {
   return (
@@ -48,6 +49,7 @@ export default function Home() {
       <header className="block h-12 w-screen bg-sky-300"></header>
       <nav className="sticky top-0 z-10 h-20 w-screen bg-slate-300 shadow-md"></nav>
       <Content />
+      <CommentSection />
       <footer></footer>
     </>
   );
