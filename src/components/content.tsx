@@ -1,5 +1,6 @@
 import Card from "./card";
 import InteractiveRating from "./interactive-rating";
+import NewsletterSignUp from "./newsletter-sign-up";
 import QRCode from "./qr-code";
 
 const Content = () => {
@@ -15,6 +16,8 @@ const Content = () => {
         <InteractiveRating />
       </Card>
       <Card />
+
+      <NewsletterSignUp />
     </main>
   );
 };
