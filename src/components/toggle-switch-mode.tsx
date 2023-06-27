@@ -12,12 +12,12 @@ export default function ToggleSwitchMode({ toggleDarkMode }: Props) {
   }
 
   return (
-    <div className="relative flex h-full w-full grid-cols-1 flex-col bg-white p-4  font-outfit duration-500 hover:shadow-lg md:col-span-2 md:col-span-2 md:grid-cols-2">
-      <nav
-        className={`flex w-full place-content-between items-end ${
-          toggleDarkMode ? "dark" : ""
-        }`}
-      >
+    <div
+      className={`${
+        toggleDarkMode ? "bg-slate-600" : "bg-white"
+      } relative flex h-full w-full grid-cols-1 flex-col  p-4 font-outfit duration-500 hover:shadow-lg md:col-span-2 md:grid-cols-2`}
+    >
+      <nav className="flex w-full place-content-between items-end">
         <h3 className="text-xl">I am some heading</h3>
 
         <div className="flex items-center space-x-1">
@@ -32,11 +32,7 @@ export default function ToggleSwitchMode({ toggleDarkMode }: Props) {
         </div>
       </nav>
 
-      <div
-        className={`absolute top-1/2 -translate-y-1/2 ${
-          toggleDarkMode ? "dark" : ""
-        }`}
-      >
+      <div className="absolute top-1/2 -translate-y-1/2">
         <h2 className="text-2xl">Fun facts about React</h2>
         <ul className="list-disc px-6 py-2 text-sm marker:text-sky-400">
           <li>Was first released in 2013</li>
@@ -46,6 +42,8 @@ export default function ToggleSwitchMode({ toggleDarkMode }: Props) {
           <li>Powers thousands of enterprise apps, including mobile apps</li>
         </ul>
       </div>
+
+      <h2>{String(toggleDarkMode)} xx</h2>
     </div>
   );
 }
