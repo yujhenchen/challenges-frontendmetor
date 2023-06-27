@@ -4,7 +4,7 @@ type Props = {
   ratingNum: number;
 };
 
-const InteractiveThanks = ({ ratingNum }: Props) => {
+export default function InteractiveThanks ({ ratingNum }: Props) {
   return (
     <div className="flex h-full flex-col justify-items-center bg-slate-800 p-4">
       <div className="relative mt-4 flex aspect-[4/3] w-full overflow-hidden">
@@ -27,6 +27,4 @@ const InteractiveThanks = ({ ratingNum }: Props) => {
       </p>
     </div>
   );
-};
-
-export default InteractiveThanks;
+}

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import InteractiveThanks from "./interactive-rating-thanks";
 
-const InteractiveRating = () => {
+export default function InteractiveRating() {
   const ratingNumbers = Array.from(Array(5).keys()).map((x) => x + 1);
 
   const [selectedRating, setSelectedRating] = useState(0);
@@ -99,6 +99,4 @@ const InteractiveRating = () => {
       )}
     </>
   );
-};
-
-export default InteractiveRating;
+}

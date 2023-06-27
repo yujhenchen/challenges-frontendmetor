@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-const QRCode = () => {
+export default function QRCode () {
   return (
     // <div className="h-full w-full bg-white font-outfit duration-500 hover:shadow-lg">
     <div className="flex h-full w-full flex-col items-center justify-items-center p-4">
@@ -22,6 +22,4 @@ const QRCode = () => {
     </div>
     // </div>
   );
-};
-
-export default QRCode;
+}

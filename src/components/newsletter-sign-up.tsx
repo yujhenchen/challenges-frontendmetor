@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-const NewsletterSignUp = () => {
+export default function NewsletterSignUp () {
   return (
     <div className="grid h-full w-full grid-cols-1 place-content-between bg-white p-4 font-outfit duration-500 hover:shadow-lg md:col-span-2 md:grid-cols-2">
       <div className="relative w-full bg-slate-400 md:order-last">
@@ -25,6 +25,4 @@ const NewsletterSignUp = () => {
       </div>
     </div>
   );
-};
-
-export default NewsletterSignUp;
+}
