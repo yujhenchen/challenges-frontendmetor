@@ -14,7 +14,7 @@ export default function ToggleSwitchMode({ toggleDarkMode }: Props) {
   return (
     <div
       className={`${
-        toggleDarkMode ? "bg-slate-600" : "bg-white"
+        toggleChecked ? "bg-slate-600" : "bg-white"
       } relative flex h-full w-full grid-cols-1 flex-col  p-4 font-outfit duration-500 hover:shadow-lg md:col-span-2 md:grid-cols-2`}
     >
       <nav className="flex w-full place-content-between items-end">
@@ -43,7 +43,7 @@ export default function ToggleSwitchMode({ toggleDarkMode }: Props) {
         </ul>
       </div>
 
-      <h2>{String(toggleDarkMode)} xx</h2>
+      <h2>{String(toggleChecked)} xx</h2>
     </div>
   );
 }
