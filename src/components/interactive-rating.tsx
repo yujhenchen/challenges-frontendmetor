@@ -1,15 +1,16 @@
 import { useState } from "react";
 import InteractiveThanks from "./interactive-rating-thanks";
 
+// const variables and component specific types here
+enum FeedbackSteps {
+  First = "first",
+  Second = "second",
+}
+
+const ratingNumbers = Array.from(Array(5).keys()).map((x) => x + 1);
+
 export default function InteractiveRating() {
-  const ratingNumbers = Array.from(Array(5).keys()).map((x) => x + 1);
-
   const [selectedRating, setSelectedRating] = useState(0);
-
-  enum FeedbackSteps {
-    First = "first",
-    Second = "second",
-  }
 
   // use an enum to keep steps names, so render different step components base on steps
   const [currentStep, setCurrentStep] = useState(FeedbackSteps.First);
