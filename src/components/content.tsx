@@ -16,12 +16,7 @@ export default function Content() {
       <Card>
         <InteractiveRating />
       </Card>
-      <Card />
-
-      <Card>
-        <ToggleSwitchMode toggleDarkMode={false} />
-      </Card>
-
+      <ToggleSwitchMode toggleDarkMode={false} />
       <NewsletterSignUp />
     </main>
   );
