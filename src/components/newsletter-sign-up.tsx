@@ -1,8 +1,17 @@
+import Image from "next/image";
+
 const NewsletterSignUp = () => {
   return (
-    <div className="flex h-full w-full flex-col bg-white font-outfit duration-500 hover:shadow-lg md:col-span-2 md:flex-row-reverse">
-      <div className="bg-slate-400">image</div>
-      <div className="flex flex-col bg-slate-200">
+    <div className="grid h-full w-full grid-cols-1 place-content-between bg-white p-4 font-outfit duration-500 hover:shadow-lg md:col-span-2 md:grid-cols-2">
+      <div className="relative w-full bg-slate-400 md:order-last">
+        <Image
+          src="/assets/news-letter-sign-up/illustration-sign-up-desktop.svg"
+          alt="Sing up news letter image"
+          fill
+          style={{ objectFit: "contain" }}
+        />
+      </div>
+      <div className="flex flex-col place-content-between bg-slate-200">
         <h1>stay updated container</h1>
         <p>Join 60,000+ product managers receiving monthly updates on:</p>
         <ul>
