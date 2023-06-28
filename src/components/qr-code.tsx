@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-export default function QRCode () {
+export default function QRCode() {
   return (
     // <div className="h-full w-full bg-white font-outfit duration-500 hover:shadow-lg">
     <div className="flex h-full w-full flex-col items-center justify-items-center p-4">
@@ -15,7 +15,7 @@ export default function QRCode () {
       <h1 className="pb-2 pt-4 text-center font-outfit text-base font-bold">
         Improve your front-end skills by building projects
       </h1>
-      <p className="text-center font-outfit font-normal text-grayishblue">
+      <p className="text-center font-outfit text-sm text-slate-600">
         Scan the QR code to visit Frontend Mentor and take your coding skills to
         the next level
       </p>
