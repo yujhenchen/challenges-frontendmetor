@@ -27,7 +27,7 @@ export default function NewsletterSignUp() {
         </ul>
         <div className="flex py-4">
           <label className="text-sm">Email address</label>
-          <input className="rounded-lg border border-slate-600" />
+          <input className="min-w-0 rounded-lg border border-slate-600" />
         </div>
 
         <button type="submit">Subscribe to monthly newsletter</button>
