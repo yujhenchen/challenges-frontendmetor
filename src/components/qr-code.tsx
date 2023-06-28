@@ -2,7 +2,6 @@ import Image from "next/image";
 
 export default function QRCode() {
   return (
-    // <div className="h-full w-full bg-white font-outfit duration-500 hover:shadow-lg">
     <div className="flex h-full w-full flex-col items-center justify-items-center p-4">
       <div className="relative aspect-square w-full max-w-[576px] overflow-hidden rounded-2xl">
         <Image
@@ -20,6 +19,5 @@ export default function QRCode() {
         the next level
       </p>
     </div>
-    // </div>
   );
 }

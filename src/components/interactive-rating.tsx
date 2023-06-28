@@ -7,18 +7,17 @@ enum FeedbackSteps {
   Second = "second",
 }
 
+const RatingButtonColors = {
+  Default: "bg-slate-600",
+  Selected: "bg-orange-600",
+};
+
 const ratingNumbers = Array.from(Array(5).keys()).map((x) => x + 1);
 
 export default function InteractiveRating() {
   const [selectedRating, setSelectedRating] = useState(0);
 
-  // use an enum to keep steps names, so render different step components base on steps
   const [currentStep, setCurrentStep] = useState(FeedbackSteps.First);
-
-  const ratingButtonColors = {
-    default: "bg-slate-800",
-    selected: "bg-orange-600",
-  };
 
   function handleRating(
     event: React.MouseEvent<HTMLButtonElement, MouseEvent>
@@ -68,8 +67,8 @@ export default function InteractiveRating() {
                 key={num}
                 className={`aspect-square w-[20%] rounded-full text-center text-white duration-200 hover:bg-orange-400 ${
                   selectedRating === num
-                    ? ratingButtonColors.selected
-                    : ratingButtonColors.default
+                    ? RatingButtonColors.Selected
+                    : RatingButtonColors.Default
                 }`}
                 onClick={handleRating}
                 value={num}
