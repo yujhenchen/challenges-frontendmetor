@@ -28,14 +28,23 @@ export default function NewsletterSignUp() {
           <li>Measuring to ensure updates are a success</li>
           <li>And much more!</li>
         </ul>
-        <div className="flex py-4">
-          <label className="text-sm">Email address</label>
-          <input className="min-w-0 rounded-lg border" />
-        </div>
-
-        <button className="min-w-0" type="submit">
-          Subscribe to monthly newsletter
-        </button>
+        <form className="flex-col space-y-2">
+          <div className="flex space-x-1">
+            <label className="text-xs">Email address</label>
+            <input
+              type="email"
+              placeholder="abc@gmail.com"
+              className="min-w-0 rounded-lg border"
+              required
+            />
+          </div>
+          <button
+            className="min-w-0 rounded-xl bg-slate-600 px-4 py-2 text-sm text-white"
+            type="submit"
+          >
+            Subscribe to monthly newsletter
+          </button>
+        </form>
       </div>
     </div>
   );
