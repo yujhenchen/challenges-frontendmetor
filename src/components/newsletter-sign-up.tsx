@@ -3,7 +3,7 @@ import Image from "next/image";
 export default function NewsletterSignUp() {
   return (
     <div className="grid h-full w-full grid-cols-1 place-content-between bg-white p-4 font-outfit duration-500 hover:shadow-lg md:grid-cols-2 md:place-content-center lg:col-span-2">
-      <picture className="relative aspect-[4/3] w-full md:order-last md:aspect-auto">
+      <picture className="relative aspect-[4/3] w-full bg-slate-500 md:order-last md:aspect-auto">
         <source
           srcSet="/assets/news-letter-sign-up/illustration-sign-up-desktop.svg"
           media="(min-width: 640px)"
@@ -15,7 +15,7 @@ export default function NewsletterSignUp() {
           style={{ objectFit: "contain" }}
         />
       </picture>
-      <div className="flex flex-col place-content-between">
+      <div className="flex flex-col place-content-between bg-slate-300">
         <h1 className="text-xl">Stay updated!</h1>
         <p className="text-sm">
           Join 60,000+ product managers receiving monthly updates on:

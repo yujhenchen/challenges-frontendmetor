@@ -22,7 +22,7 @@ export default function ToggleSwitchMode({ toggleDarkMode }: Props) {
         toggleChecked
           ? `text-slate-600	${ModeColor.Dark}`
           : `text-slate-800 ${ModeColor.Light}`
-      } relative flex h-full w-full grid-cols-1 flex-col  p-4 font-outfit duration-500 hover:shadow-lg md:grid-cols-2 lg:col-span-2`}
+      } relative flex h-full w-full flex-col p-4 font-outfit duration-500 hover:shadow-lg lg:col-span-2`}
     >
       <nav className="flex w-full place-content-between items-end">
         <h3 className="text-xl">I am some heading</h3>
