@@ -1,8 +1,8 @@
-import Card from "./card";
-import InteractiveRating from "./interactive-rating";
-import NewsletterSignUp from "./newsletter-sign-up";
-import QRCode from "./qr-code";
-import ToggleSwitchMode from "./toggle-switch-mode";
+import Card from "./Card";
+import InteractiveRating from "./InteractiveRating";
+import NewsletterSignUp from "./NewsletterSignUp";
+import QRCode from "./QRCode";
+import ToggleSwitchMode from "./ToggleSwitchMode";
 
 export default function Content() {
   return (

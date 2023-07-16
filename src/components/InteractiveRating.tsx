@@ -1,5 +1,5 @@
 import { useState } from "react";
-import InteractiveThanks from "./interactive-rating-thanks";
+import InteractiveThanks from "./InteractiveRatingThanks";
 
 // const variables and component specific types here
 enum FeedbackSteps {
