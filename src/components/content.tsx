@@ -15,6 +15,7 @@ export default function Content() {
       </Card>
       <ToggleSwitchMode toggleDarkMode={false} />
       <NewsletterSignUp />
+      <Card />
     </main>
   );
 }
