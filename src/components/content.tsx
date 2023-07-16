@@ -1,5 +1,6 @@
 import Card from "./Card";
 import InteractiveRating from "./InteractiveRating";
+import NewsLetterSuccessModal from "./NewsLetterSuccessModal";
 import NewsletterSignUp from "./NewsletterSignUp";
 import QRCode from "./QRCode";
 import ToggleSwitchMode from "./ToggleSwitchMode";
@@ -15,6 +16,7 @@ export default function Content() {
       </Card>
       <ToggleSwitchMode toggleDarkMode={false} />
       <NewsletterSignUp />
+      <NewsLetterSuccessModal />
       <Card />
     </main>
   );
