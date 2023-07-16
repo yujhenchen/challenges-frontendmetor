@@ -1,13 +1,18 @@
 import Image from "next/image";
+import InteractiveRatingSubmit from "./InteractiveRatingSubmit";
 
 type Props = {
-  ratingNum: number;
+  ratingNumber: number;
+  handleResetRating: (event: React.MouseEvent) => void;
 };
 
-export default function InteractiveThanks({ ratingNum }: Props) {
+export default function InteractiveThanks({
+  ratingNumber,
+  handleResetRating,
+}: Props) {
   return (
-    <div className="flex h-full flex-col justify-items-center bg-white p-4">
-      <div className="relative mt-4 flex aspect-[4/3] w-full overflow-hidden">
+    <div className="flex h-full flex-col place-content-between justify-items-center bg-white p-4">
+      <div className="relative flex aspect-[4/3] w-full overflow-hidden">
         <Image
           src="/assets/illustration-thank-you.svg"
           alt="Picture of thank you for rating"
@@ -15,16 +20,22 @@ export default function InteractiveThanks({ ratingNum }: Props) {
           style={{ objectFit: "contain" }}
         />
       </div>
-      <div className=" mt-2 w-full rounded-3xl bg-orange-600 p-2 text-center text-xs text-white">
-        You selected {ratingNum} out of 5
+      <div className="flex w-full justify-center">
+        <div className="rounded-3xl bg-slate-600 p-2 text-center text-xs text-white">
+          You selected {ratingNumber} out of 5
+        </div>
       </div>
-      <h1 className="mt-6 text-center text-xl font-bold text-slate-800">
+      <h1 className="text-center text-xl font-bold text-slate-800">
         Thank you!
       </h1>
-      <p className="mt-2 text-center text-sm text-slate-600">
+      <p className="text-center text-sm text-slate-600">
         We appreciate you taking the time to give a rating. If you ever need
         more support, don’t hesitate to get in touch!
       </p>
+      <InteractiveRatingSubmit
+        buttonName="Select Again"
+        handleOnClick={handleResetRating}
+      />
     </div>
   );
 }
