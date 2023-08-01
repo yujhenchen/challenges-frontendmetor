@@ -1,5 +1,5 @@
 import Head from "next/head";
-import Content from "~/components/Content";
+import Layout from "~/components/Layout";
 
 export default function Home() {
   return (
@@ -12,7 +12,7 @@ export default function Home() {
         />
         <link rel="icon" href="/" />
       </Head>
-      <Content />
+      <Layout />
       <footer></footer>
     </>
   );
