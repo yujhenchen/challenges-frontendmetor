@@ -40,12 +40,12 @@ export default function NewsletterSignUp() {
         <ul className="w-full text-xs md:space-y-2">
           {infoList.map((element, index) => (
             <li key={index} className="flex items-center space-x-1">
-              <div className="relative aspect-square w-4">
+              <div className="relative aspect-square h-4">
                 <Image
                   src="assets/news-letter-sign-up/icon-list.svg"
                   alt={element}
                   fill
-                  style={{ objectFit: "contain" }}
+                  className="aspect-square object-cover"
                 />
               </div>
               <span>{element}</span>
