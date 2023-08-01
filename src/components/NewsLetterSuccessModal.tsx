@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function NewsLetterSuccessModal() {
   return (
-    <div className="flex flex-col bg-white p-4 font-outfit shadow-lg duration-500">
+    <div className="flex flex-col bg-white p-4 shadow-lg duration-500">
       <div className="relative aspect-square w-[15%]">
         <Image
           src="/assets/news-letter-sign-up/icon-success.svg"

@@ -11,10 +11,10 @@ export default function QRCode() {
           style={{ objectFit: "cover" }}
         />
       </div>
-      <h1 className="pb-2 pt-4 text-center font-outfit text-base font-bold">
+      <h1 className="pb-2 pt-4 text-center text-base font-bold">
         Improve your front-end skills by building projects
       </h1>
-      <p className="text-center font-outfit text-sm text-slate-600">
+      <p className="text-center text-sm text-slate-600">
         Scan the QR code to visit Frontend Mentor and take your coding skills to
         the next level
       </p>

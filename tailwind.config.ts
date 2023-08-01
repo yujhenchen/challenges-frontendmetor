@@ -6,7 +6,7 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        'outfit': ['Outfit', 'sans-serif'],
+        'outfit': ['Verdana', 'sans-serif'],
       },
       colors: {
         lightgray: 'hsl(var(--color-light-gray) / <alpha-value>)',

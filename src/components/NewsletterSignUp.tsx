@@ -16,7 +16,7 @@ export default function NewsletterSignUp() {
     // set or remove invisible for the validation string
   }
   return (
-    <div className="flex h-full w-full flex-col bg-white p-4 font-outfit duration-500 hover:shadow-lg lg:col-span-2 lg:flex-row-reverse">
+    <div className="flex h-full w-full flex-col bg-white p-4 duration-500 hover:shadow-lg lg:col-span-2 lg:flex-row-reverse">
       <div className="flex h-full w-full lg:w-1/2">
         <picture className="relative aspect-[4/3] w-full md:order-last md:aspect-auto">
           <source
