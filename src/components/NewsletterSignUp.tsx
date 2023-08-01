@@ -1,6 +1,15 @@
 import Image from "next/image";
+import { useState } from "react";
 
 export default function NewsletterSignUp() {
+  const infoList = [
+    "Product discovery and building what matters",
+    "Measuring to ensure updates are a success",
+    "And much more!",
+  ];
+
+  const [showErrorMessage, setShowErrorMessage] = useState(false);
+
   function handleSubmit(event: React.MouseEvent): void {
     event.preventDefault();
 
@@ -29,45 +38,29 @@ export default function NewsletterSignUp() {
           Join 60,000+ product managers receiving monthly updates on:
         </p>
         <ul className="w-full text-xs md:space-y-2">
-          <li className="flex items-center space-x-1">
-            <div className="relative aspect-square w-4">
-              <Image
-                src="assets/news-letter-sign-up/icon-list.svg"
-                alt="Sign up list icon"
-                fill
-                style={{ objectFit: "contain" }}
-              />
-            </div>
-            <span>Product discovery and building what matters</span>
-          </li>
-          <li className="flex items-center space-x-1">
-            <div className="relative aspect-square w-4">
-              <Image
-                src="assets/news-letter-sign-up/icon-list.svg"
-                alt="Sign up list icon"
-                fill
-                style={{ objectFit: "contain" }}
-              />
-            </div>
-            <span>Measuring to ensure updates are a success</span>
-          </li>
-          <li className="flex items-center space-x-1">
-            <div className="relative aspect-square w-4">
-              <Image
-                src="assets/news-letter-sign-up/icon-list.svg"
-                alt="Sign up list icon"
-                fill
-                style={{ objectFit: "contain" }}
-              />
-            </div>
-            <span>And much more!</span>
-          </li>
+          {infoList.map((element, index) => (
+            <li key={index} className="flex items-center space-x-1">
+              <div className="relative aspect-square w-4">
+                <Image
+                  src="assets/news-letter-sign-up/icon-list.svg"
+                  alt={element}
+                  fill
+                  style={{ objectFit: "contain" }}
+                />
+              </div>
+              <span>{element}</span>
+            </li>
+          ))}
         </ul>
         <form className="flex w-full flex-col space-y-2">
           <div className="flex place-content-between items-center space-x-1">
             <label className="flex text-xs">Email address:</label>
             <div className="flex grow flex-col">
-              <span className="text-right text-xs text-red-600">
+              <span
+                className={`"text-right text-xs text-red-600 ${
+                  showErrorMessage ? "" : "hidden"
+                }`}
+              >
                 Valid email required
               </span>
               <input
