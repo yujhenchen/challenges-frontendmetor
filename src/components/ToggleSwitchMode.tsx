@@ -25,7 +25,7 @@ export default function ToggleSwitchMode({ toggleDarkMode }: Props) {
       } relative flex h-full w-full flex-col p-4 duration-500 hover:shadow-lg lg:col-span-2`}
     >
       <nav className="flex w-full place-content-between items-end">
-        <h3 className="text-xl">I am some heading</h3>
+        <h3 className="text-xl">I am a heading</h3>
 
         <div className="flex items-center space-x-1">
           <p className="">Light</p>
