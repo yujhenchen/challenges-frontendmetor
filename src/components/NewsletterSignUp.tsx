@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { useState } from "react";
+import NewsLetterSuccessModal from "./NewsLetterSuccessModal";
 
 export default function NewsletterSignUp() {
   const infoList = [
@@ -10,13 +11,20 @@ export default function NewsletterSignUp() {
 
   const [showErrorMessage, setShowErrorMessage] = useState(false);
 
+  const [showSuccessMessage, setShowSuccessMessage] = useState(false);
+
   function handleSubmit(event: React.MouseEvent): void {
     event.preventDefault();
 
     // set or remove invisible for the validation string
+    setShowSuccessMessage(true);
   }
   return (
-    <div className="flex h-full w-full flex-col bg-white p-4 duration-500 hover:shadow-lg lg:col-span-2 lg:flex-row-reverse">
+    <div className="relative flex h-full w-full flex-col bg-white p-4 duration-500 hover:shadow-lg lg:col-span-2 lg:flex-row-reverse">
+      <div className="absolute left-0 top-0 z-10 flex h-full w-full items-center justify-items-center p-12 backdrop-blur-lg">
+        <NewsLetterSuccessModal />
+      </div>
+
       <div className="flex h-full w-full lg:w-1/2">
         <picture className="relative aspect-[4/3] w-full md:order-last md:aspect-auto">
           <source

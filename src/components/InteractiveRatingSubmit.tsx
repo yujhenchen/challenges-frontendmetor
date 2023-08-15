@@ -10,7 +10,7 @@ export default function InteractiveRatingSubmit({
   return (
     <button
       type="submit"
-      className="w-full rounded-3xl bg-orange-600 py-2 text-white"
+      className="w-full rounded-xl bg-orange-600 py-2 text-white"
       onClick={handleOnClick}
     >
       {buttonName}
