@@ -60,7 +60,7 @@ export default function NewsletterSignUp() {
       </div>
 
       <div className="flex flex-col place-content-between lg:w-1/2 lg:px-2">
-        <h1 className="text-xl">Stay updated!</h1>
+        <h1 className="text-xl font-bold">Stay updated!</h1>
         <p className="text-sm">
           Join 60,000+ product managers receiving monthly updates on:
         </p>
