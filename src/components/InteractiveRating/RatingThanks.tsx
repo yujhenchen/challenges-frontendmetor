@@ -1,12 +1,12 @@
 import Image from "next/image";
-import InteractiveRatingSubmit from "./InteractiveRatingSubmit";
+import RatingSubmit from "./RatingSubmit";
 
 type Props = {
   ratingNumber: number;
   handleResetRating: (event: React.MouseEvent) => void;
 };
 
-export default function InteractiveThanks({
+export default function RatingThanks({
   ratingNumber,
   handleResetRating,
 }: Props) {
@@ -32,7 +32,7 @@ export default function InteractiveThanks({
         We appreciate you taking the time to give a rating. If you ever need
         more support, don’t hesitate to get in touch!
       </p>
-      <InteractiveRatingSubmit
+      <RatingSubmit
         buttonName="Select Again"
         handleOnClick={handleResetRating}
       />

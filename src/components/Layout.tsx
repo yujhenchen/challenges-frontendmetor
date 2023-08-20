@@ -1,7 +1,7 @@
 import EmptyCard from "./EmptyCard";
-import InteractiveRating from "./InteractiveRating";
-import NewsLetterSuccessModal from "./NewsLetterSuccessModal";
-import NewsletterSignUp from "./NewsletterSignUp";
+import RatingCard from "./InteractiveRating/RatingCard";
+import SuccessModal from "./NewsLetter/SuccessModal";
+import NewsletterSignUp from "./NewsLetter/NewsletterSignUp";
 import QRCode from "./QRCode";
 import ToggleSwitchMode from "./ToggleSwitchMode";
 
@@ -12,11 +12,11 @@ export default function Layout() {
         <QRCode />
       </EmptyCard>
       <EmptyCard>
-        <InteractiveRating />
+        <RatingCard />
       </EmptyCard>
       <ToggleSwitchMode toggleDarkMode={false} />
       <NewsletterSignUp />
-      <NewsLetterSuccessModal />
+      <SuccessModal />
       <EmptyCard />
     </main>
   );

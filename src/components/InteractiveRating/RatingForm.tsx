@@ -1,5 +1,5 @@
-import { RatingButtonColors } from "../constants/InteractiveRating";
-import InteractiveRatingSubmit from "./InteractiveRatingSubmit";
+import { RatingButtonColors } from "../../constants/InteractiveRating";
+import RatingSubmit from "./RatingSubmit";
 
 type Props = {
   ratingNumbers: number[];
@@ -8,7 +8,7 @@ type Props = {
   handleSubmit: (event: React.MouseEvent) => void;
 };
 
-export default function InteractiveRatingForm({
+export default function RatingForm({
   ratingNumbers,
   selectedRating,
   handleRating,
@@ -51,10 +51,7 @@ export default function InteractiveRatingForm({
           );
         })}
       </div>
-      <InteractiveRatingSubmit
-        buttonName="Submit"
-        handleOnClick={handleSubmit}
-      />
+      <RatingSubmit buttonName="Submit" handleOnClick={handleSubmit} />
     </form>
   );
 }

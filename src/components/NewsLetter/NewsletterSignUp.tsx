@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { useState } from "react";
-import NewsLetterSuccessModal from "./NewsLetterSuccessModal";
+import SuccessModal from "./SuccessModal";
 
 export default function NewsletterSignUp() {
   const infoList = [
@@ -22,7 +22,7 @@ export default function NewsletterSignUp() {
   return (
     <div className="relative flex h-full w-full flex-col bg-white p-4 duration-500 hover:shadow-lg lg:col-span-2 lg:flex-row-reverse">
       <div className="absolute left-0 top-0 z-10 flex h-full w-full items-center justify-items-center p-12 backdrop-blur-lg">
-        <NewsLetterSuccessModal />
+        <SuccessModal />
       </div>
 
       <div className="flex h-full w-full lg:w-1/2">

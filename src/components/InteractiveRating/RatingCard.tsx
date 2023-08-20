@@ -1,11 +1,11 @@
 import { useState } from "react";
-import { FeedbackSteps } from "../constants/InteractiveRating";
-import InteractiveThanks from "./InteractiveRatingThanks";
-import InteractiveRatingForm from "./InteractiveRatingForm";
+import { FeedbackSteps } from "../../constants/InteractiveRating";
+import RatingThanks from "./RatingThanks";
+import RatingForm from "./RatingForm";
 
 const ratingNumbers = Array.from(Array(5).keys()).map((x) => x + 1);
 
-export default function InteractiveRating() {
+export default function RatingCard() {
   const [selectedRating, setSelectedRating] = useState(0);
 
   const [currentStep, setCurrentStep] = useState(FeedbackSteps.First);
@@ -35,9 +35,9 @@ export default function InteractiveRating() {
     setSelectedRating(0);
   }
 
-  const RatingForm = () => {
+  const Form = () => {
     return (
-      <InteractiveRatingForm
+      <RatingForm
         ratingNumbers={ratingNumbers}
         selectedRating={selectedRating}
         handleRating={handleRating}
@@ -49,12 +49,12 @@ export default function InteractiveRating() {
   return (
     <>
       {currentStep === FeedbackSteps.Second && selectedRating !== 0 ? (
-        <InteractiveThanks
+        <RatingThanks
           ratingNumber={selectedRating}
           handleResetRating={handleResetRating}
         />
       ) : (
-        <RatingForm />
+        <Form />
       )}
     </>
   );

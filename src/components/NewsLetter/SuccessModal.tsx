@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 
-export default function NewsLetterSuccessModal() {
+export default function SuccessModal() {
   return (
     <div className="flex flex-col bg-white p-4 shadow-lg duration-500">
       <div className="relative aspect-square w-[15%]">

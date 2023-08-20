@@ -3,10 +3,7 @@ type Props = {
   handleOnClick: (event: React.MouseEvent) => void;
 };
 
-export default function InteractiveRatingSubmit({
-  buttonName,
-  handleOnClick,
-}: Props) {
+export default function RatingSubmit({ buttonName, handleOnClick }: Props) {
   return (
     <button
       type="submit"
