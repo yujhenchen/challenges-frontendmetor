@@ -9,21 +9,40 @@ export default function NewsletterSignUp() {
     "And much more!",
   ];
 
+  const [userInputEmail, setUserInputEmail] = useState("");
+
   const [showErrorMessage, setShowErrorMessage] = useState(false);
 
   const [showSuccessMessage, setShowSuccessMessage] = useState(false);
 
-  function handleSubmit(event: React.MouseEvent): void {
+  function isEmailValid(email: string): boolean {
+    const expression = /^[a-z0-9]+@[a-z]+\.[a-z]{2,3}$/;
+    return expression.test(email);
+  }
+
+  function onChangeEmail(email: string): void {
+    setShowErrorMessage(false);
+    setUserInputEmail(email);
+  }
+
+  function onSubmit(event: React.MouseEvent): void {
     event.preventDefault();
 
-    // set or remove invisible for the validation string
-    setShowSuccessMessage(true);
+    if (isEmailValid(userInputEmail)) {
+      setShowErrorMessage(false);
+      setShowSuccessMessage(true);
+    } else {
+      setShowErrorMessage(true);
+      setShowSuccessMessage(false);
+    }
   }
   return (
     <div className="relative flex h-full w-full flex-col bg-white p-4 duration-500 hover:shadow-lg lg:col-span-2 lg:flex-row-reverse">
-      <div className="absolute left-0 top-0 z-10 flex h-full w-full items-center justify-items-center p-12 backdrop-blur-lg">
-        <SuccessModal />
-      </div>
+      {showSuccessMessage ? (
+        <div className="absolute left-0 top-0 z-10 flex h-full w-full items-center justify-items-center p-12 backdrop-blur-lg">
+          <SuccessModal />
+        </div>
+      ) : null}
 
       <div className="flex h-full w-full lg:w-1/2">
         <picture className="relative aspect-[4/3] w-full md:order-last md:aspect-auto">
@@ -40,7 +59,7 @@ export default function NewsletterSignUp() {
         </picture>
       </div>
 
-      <div className="flex flex-col place-content-between lg:w-1/2 lg:px-2 lg:py-6">
+      <div className="flex flex-col place-content-between lg:w-1/2 lg:px-2">
         <h1 className="text-xl">Stay updated!</h1>
         <p className="text-sm">
           Join 60,000+ product managers receiving monthly updates on:
@@ -76,13 +95,15 @@ export default function NewsletterSignUp() {
                 placeholder="abc@gmail.com"
                 className="h-6 w-full rounded-lg border"
                 required
+                value={userInputEmail}
+                onChange={(event) => onChangeEmail(event.target.value)}
               />
             </div>
           </div>
           <button
-            className="min-w-0 rounded-xl bg-slate-600 px-4 py-2 text-sm text-white"
+            className="min-w-0 rounded-xl bg-amber-600 px-4 py-2 text-sm text-white"
             type="submit"
-            onClick={handleSubmit}
+            onClick={onSubmit}
           >
             Subscribe to monthly newsletter
           </button>

@@ -30,7 +30,7 @@ export default function RatingThanks({
       </h1>
       <p className="text-center text-sm text-slate-600">
         We appreciate you taking the time to give a rating. If you ever need
-        more support, don’t hesitate to get in touch!
+        more support, do not hesitate to get in touch!
       </p>
       <RatingSubmit
         buttonName="Select Again"

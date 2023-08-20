@@ -5,5 +5,5 @@ export enum FeedbackSteps {
 
 export enum RatingButtonColors {
   Default = 'bg-slate-600',
-  Selected = 'bg-orange-600',
+  Selected = 'bg-amber-600',
 }

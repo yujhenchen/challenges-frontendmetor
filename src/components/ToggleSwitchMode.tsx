@@ -24,9 +24,7 @@ export default function ToggleSwitchMode({ toggleDarkMode }: Props) {
           : `text-slate-800 ${ModeColor.Light}`
       } relative flex h-full w-full flex-col p-4 duration-500 hover:shadow-lg lg:col-span-2`}
     >
-      <nav className="flex w-full place-content-between items-end">
-        <h3 className="text-xl">I am a heading</h3>
-
+      <nav className="flex w-full place-content-end">
         <div className="flex items-center space-x-1">
           <p className="">Light</p>
           <input
@@ -47,7 +45,11 @@ export default function ToggleSwitchMode({ toggleDarkMode }: Props) {
         >
           Fun facts about React
         </h2>
-        <ul className="list-disc px-6 py-2 text-sm text-slate-600 marker:text-sky-400">
+        <ul
+          className={`list-disc px-6 py-2 text-base marker:text-sky-400 ${
+            toggleChecked ? "text-amber-600" : " text-slate-600"
+          }`}
+        >
           <li>Was first released in 2013</li>
           <li>Was originally created by Jordan Walke</li>
           <li>Has well over 100K stars on GitHub</li>
