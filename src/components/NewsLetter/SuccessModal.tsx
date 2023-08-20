@@ -1,6 +1,10 @@
 import React from "react";
 
-export default function SuccessModal() {
+type Props = {
+  onDismiss: () => void;
+};
+
+export default function SuccessModal({ onDismiss }: Props) {
   return (
     <div className="flex flex-col bg-white p-4 shadow-lg duration-500">
       <div className="aspect-square w-[15%]">
@@ -23,7 +27,10 @@ export default function SuccessModal() {
         </p>
       </div>
       <div className="flex items-center justify-center">
-        <button className="min-w-0 rounded-xl bg-amber-600 px-4 py-2 text-sm text-white">
+        <button
+          className="min-w-0 rounded-xl bg-amber-600 px-4 py-2 text-sm text-white"
+          onClick={onDismiss}
+        >
           Dismiss message
         </button>
       </div>

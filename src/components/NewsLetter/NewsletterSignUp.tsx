@@ -36,11 +36,17 @@ export default function NewsletterSignUp() {
       setShowSuccessMessage(false);
     }
   }
+
+  function onDismiss(): void {
+    setShowErrorMessage(false);
+    setShowSuccessMessage(false);
+  }
+
   return (
     <div className="relative flex h-full w-full flex-col bg-white p-4 duration-500 hover:shadow-lg lg:col-span-2 lg:flex-row-reverse">
       {showSuccessMessage ? (
         <div className="absolute left-0 top-0 z-10 flex h-full w-full items-center justify-items-center p-12 backdrop-blur-lg">
-          <SuccessModal />
+          <SuccessModal onDismiss={onDismiss} />
         </div>
       ) : null}
 
