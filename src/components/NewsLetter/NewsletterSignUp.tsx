@@ -25,9 +25,7 @@ export default function NewsletterSignUp() {
     setUserInputEmail(email);
   }
 
-  function onSubmit(event: React.MouseEvent): void {
-    event.preventDefault();
-
+  function onSubmit(): void {
     if (isEmailValid(userInputEmail)) {
       setShowErrorMessage(false);
       setShowSuccessMessage(true);
@@ -60,7 +58,7 @@ export default function NewsletterSignUp() {
             src="/assets/news-letter-sign-up/illustration-sign-up-mobile.svg"
             alt="Sing up news letter image"
             fill
-            style={{ objectFit: "contain" }}
+            className="object-contain"
           />
         </picture>
       </div>
@@ -108,7 +106,7 @@ export default function NewsletterSignUp() {
           </div>
           <button
             className="min-w-0 rounded-xl bg-amber-600 px-4 py-2 text-sm text-white"
-            type="submit"
+            type="button"
             onClick={onSubmit}
           >
             Subscribe to monthly newsletter

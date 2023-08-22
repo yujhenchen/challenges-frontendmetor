@@ -32,6 +32,7 @@ export default function ToggleSwitchMode({ toggleDarkMode }: Props) {
             className="toggle"
             checked={toggleChecked}
             onClick={handleClickToggle}
+            readOnly
           />
           <p className="">Dark</p>
         </div>

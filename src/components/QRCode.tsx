@@ -3,12 +3,12 @@ import Image from "next/image";
 export default function QRCode() {
   return (
     <div className="flex h-full w-full flex-col place-content-around items-center p-4">
-      <div className="relative aspect-square w-[70%] max-w-[576px] overflow-hidden rounded-2xl hover:rotate-12 hover:duration-500">
+      <div className="relative aspect-square w-full max-w-[576px] overflow-hidden rounded-2xl hover:rotate-12 hover:duration-500">
         <Image
           src="/assets/image-qr-code.png"
           alt="Picture of the QR code"
           fill
-          style={{ objectFit: "cover" }}
+          className="object-contain"
         />
       </div>
       <div className="flex flex-col">

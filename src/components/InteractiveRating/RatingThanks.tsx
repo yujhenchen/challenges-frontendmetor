@@ -3,7 +3,7 @@ import RatingSubmit from "./RatingSubmit";
 
 type Props = {
   ratingNumber: number;
-  handleResetRating: (event: React.MouseEvent) => void;
+  handleResetRating: () => void;
 };
 
 export default function RatingThanks({
@@ -17,7 +17,7 @@ export default function RatingThanks({
           src="/assets/illustration-thank-you.svg"
           alt="Picture of thank you for rating"
           fill
-          style={{ objectFit: "contain" }}
+          className="object-contain"
         />
       </div>
       <div className="flex w-full justify-center">

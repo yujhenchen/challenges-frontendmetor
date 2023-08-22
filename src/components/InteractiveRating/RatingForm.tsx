@@ -5,7 +5,7 @@ type Props = {
   ratingNumbers: number[];
   selectedRating: number;
   handleRating: (event: React.MouseEvent) => void;
-  handleSubmit: (event: React.MouseEvent) => void;
+  handleSubmit: () => void;
 };
 
 export default function RatingForm({

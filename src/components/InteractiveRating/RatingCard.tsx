@@ -11,26 +11,19 @@ export default function RatingCard() {
   const [currentStep, setCurrentStep] = useState(FeedbackSteps.First);
 
   function handleRating(event: React.MouseEvent): void {
-    event.preventDefault();
-
     setSelectedRating((previousNum) => {
-      return previousNum === +(event.target as HTMLButtonElement).value
-        ? 0
-        : +(event.target as HTMLButtonElement).value;
+      const value = +(event.target as HTMLButtonElement).value;
+      return previousNum === value ? 0 : value;
     });
   }
 
-  function handleSubmitRating(event: React.MouseEvent): void {
-    event.preventDefault();
-
+  function handleSubmitRating(): void {
     setCurrentStep(
       selectedRating !== 0 ? FeedbackSteps.Second : FeedbackSteps.First
     );
   }
 
-  function handleResetRating(event: React.MouseEvent): void {
-    event.preventDefault();
-
+  function handleResetRating(): void {
     setCurrentStep(FeedbackSteps.First);
     setSelectedRating(0);
   }

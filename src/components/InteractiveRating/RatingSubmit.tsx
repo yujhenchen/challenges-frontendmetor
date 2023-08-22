@@ -1,12 +1,12 @@
 type Props = {
   buttonName: string;
-  handleOnClick: (event: React.MouseEvent) => void;
+  handleOnClick: () => void;
 };
 
 export default function RatingSubmit({ buttonName, handleOnClick }: Props) {
   return (
     <button
-      type="submit"
+      type="button"
       className="w-full rounded-xl bg-amber-600 py-2 text-white"
       onClick={handleOnClick}
     >
