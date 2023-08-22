@@ -9,7 +9,7 @@ export default function NewsletterSignUp() {
     "And much more!",
   ];
 
-  const [userInputEmail, setUserInputEmail] = useState("abc@gmail.com");
+  const [userInputEmail, setUserInputEmail] = useState("hey@noemail.com");
 
   const [showErrorMessage, setShowErrorMessage] = useState(false);
 
