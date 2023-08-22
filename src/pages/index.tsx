@@ -15,8 +15,8 @@ export default function Home() {
           content="HTML, Tailwind CSS, TypeScript, React, Create T3 App"
         />
         <meta name="author" content="Jen Chen" />
-        <meta property="og:image" content="/" />
-        <link rel="icon" href="/" />
+        <meta property="og:image" content="./layout.png" />
+        <link rel="icon" href="./logo.svg" />
       </Head>
       <Layout />
       <footer></footer>
